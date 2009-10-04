@@ -91,18 +91,18 @@ function  etude_add_theme_page() {
 	}
 
 
-    add_theme_page("MistyLook Options", "MistyLook Options", 'edit_themes', basename(__FILE__), ' etude_theme_page');
+    add_theme_page("Etude Options", "Etude Options", 'edit_themes', basename(__FILE__), ' etude_theme_page');
 
 }
 
 function  etude_theme_page() {
 
 	// --------------------------
-	// MistyLook theme page content
+	// Etude theme page content
 	// --------------------------
 
-	if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>MistyLook Theme: Settings saved.</strong></p></div>';
-	if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>MistyLook Theme: Settings reset.</strong></p></div>';
+	if ( $_REQUEST['saved'] ) echo '<div id="message" class="updated fade"><p><strong>Etude Theme: Settings saved.</strong></p></div>';
+	if ( $_REQUEST['reset'] ) echo '<div id="message" class="updated fade"><p><strong>Etude Theme: Settings reset.</strong></p></div>';
 	
 ?>
 <style>
@@ -113,10 +113,10 @@ function  etude_theme_page() {
 </style>
 <div class="wrap">
 
-<h2>MistyLook 3.5</h2>
+<h2>Etude 0.2</h2>
 
-<div class="block"><h4>Theme Page: <a href="http://wpthemes.info/misty-look/">MistyLook</a> </h4> 
-					<h4>Designed & Coded by:<a href="http://wpthemes.info/" target="_blank">Sadish Bala</a></h4>
+<div class="block"><h4>Theme Page: <a href="http://etude.zanshin.net">Etude</a> </h4> 
+					<h4>Designed & Coded by:<a href="http://zanshin.net" target="_blank">Mark Nichols</a></h4>
 					
 </div>
 
@@ -225,7 +225,7 @@ function  etude_theme_page() {
 <fieldset class="options">
 <legend>Reset</legend>
 
-<p>If for some reason you want to uninstall MistyLook then press the reset button to clean things up in the database.</p>
+<p>If for some reason you want to uninstall Etude then press the reset button to clean things up in the database.</p>
 <p>You have to make sure to delete the theme folder, if you want to completely remove the theme.</p>
 <?php
 
@@ -309,7 +309,7 @@ function ml_heading( $title ) {
 <?php
 
 define('HEADER_TEXTCOLOR', '');
-define('HEADER_IMAGE', '%s/img/misty.jpg'); // %s is theme dir uri
+define('HEADER_IMAGE', '%s/img/etude.jpg'); // %s is theme dir uri
 // define('HEADER_IMAGE_WIDTH', 760);
 // define('HEADER_IMAGE_HEIGHT', 200);
 define('HEADER_IMAGE_WIDTH', 940);

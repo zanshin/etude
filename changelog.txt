@@ -1,3 +1,8 @@
+Version 0.3
+1. Added etude.jpg header image
+2. Further adjustments to header sizes in css
+3. Changes to functions.php
+
 Version 0.2
 1. Increased width to 960. Adjusted other widths to match.
 2. Increased main column width to 600/320 from 500/220.
@@ -19,13 +24,13 @@ Version 3.4
 Version 3.3.1
 Bug Fix in functions.php approximately line number 150.
 $excludepages = explode(’,', get_settings(’spotlight_excludepages’)); should actually be
-$excludepages = explode(’,', get_settings(’ etude_excludepages’));
+$excludepages = explode(’,', get_settings(’ mistylook_excludepages’));
 
 
 Version 3.3
 1. Fixed the height and width of the header image to be exact in the functions.php.
 2. Provided an alternative header image Thanks to http://www.sxc.hu/photo/685577
-[The original  etude's header is still available as misty2.jpg in the theme folder]
+[The original  mistylook's header is still available as misty2.jpg in the theme folder]
 3. Now if you do not disable the shadow effect applied to images, 
 you can use class="noborder" for those img tags.
 4. Minor style improvements in style.css.

@@ -225,10 +225,10 @@ html #feedarea {
 }
 #headerimage {
 	clear: both; 
-	background: #fff url(img/misty.jpg) no-repeat 0 0 center;
+	background: #fff url(img/etude.jpg) no-repeat 0 0 center;
 	margin: 10px; 
 	color: #fff; 	
-	height: 200px;
+	height: 300px;
 }
  html #headerimage {
 	margin-top: 0;

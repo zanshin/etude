@@ -1,3 +1,7 @@
+Version 0.4
+1. Actually made column width changes rather than just comments about them. 600/300 was final size
+2. Corrected footer display of web hosting provider
+
 Version 0.3
 1. Added etude.jpg header image
 2. Further adjustments to header sizes in css

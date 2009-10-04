@@ -113,7 +113,7 @@ function  etude_theme_page() {
 </style>
 <div class="wrap">
 
-<h2>Etude 0.2</h2>
+<h2>Etude 0.4</h2>
 
 <div class="block"><h4>Theme Page: <a href="http://etude.zanshin.net">Etude</a> </h4> 
 					<h4>Designed & Coded by:<a href="http://zanshin.net" target="_blank">Mark Nichols</a></h4>

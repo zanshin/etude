@@ -2,7 +2,7 @@
 Theme Name: Etude
 Theme URI: http://zanshin.net
 Description: A variation of the MistyLook theme by Sadish Bala.
-Version: 0.2
+Version: 0.4
 Author: Mark Nichols
 Author URI: http://zanshin.net
 */
@@ -267,7 +267,7 @@ html #feedarea {
 }
 #content-main {
 	float: left; 
-	width: 500px; 
+	width: 600px; 
 	margin-right: 20px;
 }
  html #section-index #content-main {
@@ -339,7 +339,7 @@ html #feedarea {
 /* Sidebar */
 #sidebar {
 	float: left; 
-	width: 220px;
+	width: 300px;
 	font-size:0.9em;
 }
 #sidebar ul

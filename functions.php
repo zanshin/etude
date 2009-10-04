@@ -310,8 +310,10 @@ function ml_heading( $title ) {
 
 define('HEADER_TEXTCOLOR', '');
 define('HEADER_IMAGE', '%s/img/misty.jpg'); // %s is theme dir uri
-define('HEADER_IMAGE_WIDTH', 760);
-define('HEADER_IMAGE_HEIGHT', 200);
+// define('HEADER_IMAGE_WIDTH', 760);
+// define('HEADER_IMAGE_HEIGHT', 200);
+define('HEADER_IMAGE_WIDTH', 940);
+define('HEADER_IMAGE_HEIGHT', 300);
 define( 'NO_HEADER_TEXT', true );
 
 function  etude_admin_header_style() {

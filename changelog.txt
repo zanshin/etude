@@ -1,6 +1,9 @@
+Version 0.2
+1. Increased width to 960. Adjusted other widths to match.
+2. Increased main column width to 600/320 from 500/220.
+
 Version 0.1
 1. Changed all mistylook references to etude
-2. Increased overall width from 780 px to 960 px
 
 End of MistyLook change notes.
 Version 3.5

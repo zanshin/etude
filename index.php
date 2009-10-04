@@ -2,8 +2,8 @@
 <div id="content">
 <div id="content-main">
 		<?php if ($posts) {
-				if (get_settings('mistylook_asideid') != "")
-					$AsideId = get_settings('mistylook_asideid');
+				if (get_settings(' etude_asideid') != "")
+					$AsideId = get_settings(' etude_asideid');
 				function ml_hack($str)
 				{
 					return preg_replace('|</ul>\s*<ul class="asides">|', '', $str);

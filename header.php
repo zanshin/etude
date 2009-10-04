@@ -13,15 +13,15 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 <?php
 global $page_sort;	
-	if(get_settings('mistylook_sortpages')!='')
+	if(get_settings(' etude_sortpages')!='')
 	{ 
-		$page_sort = 'sort_column='. get_settings('mistylook_sortpages');
+		$page_sort = 'sort_column='. get_settings(' etude_sortpages');
 	}	
 	global $pages_to_exclude;
 	
-	if(get_settings('mistylook_excludepages')!='')
+	if(get_settings(' etude_excludepages')!='')
 	{ 
-		$pages_to_exclude = 'exclude='. get_settings('mistylook_excludepages');
+		$pages_to_exclude = 'exclude='. get_settings(' etude_excludepages');
 	}	
 ?>
 <!-- skribit suggestion tab code -->

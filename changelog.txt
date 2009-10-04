@@ -1,3 +1,8 @@
+Version 0.1
+1. Changed all mistylook references to etude
+2. Increased overall width from 780 px to 960 px
+
+End of MistyLook change notes.
 Version 3.5
 1. Made compatible for WP 2.3
 2. Made the tag line in the header to use <p> tag instead of <h2>. [Better for Search Engines]
@@ -11,13 +16,13 @@ Version 3.4
 Version 3.3.1
 Bug Fix in functions.php approximately line number 150.
 $excludepages = explode(’,', get_settings(’spotlight_excludepages’)); should actually be
-$excludepages = explode(’,', get_settings(’mistylook_excludepages’));
+$excludepages = explode(’,', get_settings(’ etude_excludepages’));
 
 
 Version 3.3
 1. Fixed the height and width of the header image to be exact in the functions.php.
 2. Provided an alternative header image Thanks to http://www.sxc.hu/photo/685577
-[The original mistylook's header is still available as misty2.jpg in the theme folder]
+[The original  etude's header is still available as misty2.jpg in the theme folder]
 3. Now if you do not disable the shadow effect applied to images, 
 you can use class="noborder" for those img tags.
 4. Minor style improvements in style.css.

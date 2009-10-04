@@ -21,13 +21,13 @@ if ( function_exists('unregister_sidebar_widget') )
 	}
 	if ( function_exists('register_sidebar_widget') )
 	{
-		register_sidebar_widget(__('Links'), 'mistylook_ShowLinks');
+		register_sidebar_widget(__('Links'), ' etude_ShowLinks');
 	}
 	if ( function_exists('register_sidebar_widget') )
 	{
-		register_sidebar_widget(__('About'), 'mistylook_ShowAbout');
+		register_sidebar_widget(__('About'), ' etude_ShowAbout');
 	}
-function mistylook_ShowAbout() {?>
+function  etude_ShowAbout() {?>
 <li class="sidebox">
 	<h3>About</h3>
 	<p>
@@ -38,14 +38,14 @@ function mistylook_ShowAbout() {?>
 </li>
 <?php }	
 
-function mistylook_ShowRecentPosts() {?>
+function  etude_ShowRecentPosts() {?>
 <li class="sidebox">
 	<h3>Recent Posts</h3>
 	<ul><?php wp_get_archives('type=postbypost&limit=6');?></ul>
 </li>
 <?php }	
 
-function mistylook_ShowLinks() {?>
+function  etude_ShowLinks() {?>
 <li class="sidebox" id="sidelinks">
 	<ul>
 		<?php 
@@ -62,15 +62,15 @@ function mistylook_ShowLinks() {?>
 </li>
 <?php  }
 
-function mistylook_add_theme_page() {
+function  etude_add_theme_page() {
 	if ( $_GET['page'] == basename(__FILE__) ) {
 	
 	    // save settings
 		if ( 'save' == $_REQUEST['action'] ) {
 
-			update_option( 'mistylook_asideid', $_REQUEST[ 's_asideid' ] );
-			update_option( 'mistylook_sortpages', $_REQUEST[ 's_sortpages' ] );
-			if( isset( $_POST[ 'excludepages' ] ) ) { update_option( 'mistylook_excludepages', implode(',', $_POST['excludepages']) ); } else { delete_option( 'mistylook_excludepages' ); }
+			update_option( ' etude_asideid', $_REQUEST[ 's_asideid' ] );
+			update_option( ' etude_sortpages', $_REQUEST[ 's_sortpages' ] );
+			if( isset( $_POST[ 'excludepages' ] ) ) { update_option( ' etude_excludepages', implode(',', $_POST['excludepages']) ); } else { delete_option( ' etude_excludepages' ); }
 			// goto theme edit page
 			header("Location: themes.php?page=functions.php&saved=true");
 			die;
@@ -78,9 +78,9 @@ function mistylook_add_theme_page() {
   		// reset settings
 		} else if( 'reset' == $_REQUEST['action'] ) {
 
-			delete_option( 'mistylook_asideid' );
-			delete_option( 'mistylook_sortpages' );			
-			delete_option( 'mistylook_excludepages' );
+			delete_option( ' etude_asideid' );
+			delete_option( ' etude_sortpages' );			
+			delete_option( ' etude_excludepages' );
 			
 			
 			// goto theme edit page
@@ -91,11 +91,11 @@ function mistylook_add_theme_page() {
 	}
 
 
-    add_theme_page("MistyLook Options", "MistyLook Options", 'edit_themes', basename(__FILE__), 'mistylook_theme_page');
+    add_theme_page("MistyLook Options", "MistyLook Options", 'edit_themes', basename(__FILE__), ' etude_theme_page');
 
 }
 
-function mistylook_theme_page() {
+function  etude_theme_page() {
 
 	// --------------------------
 	// MistyLook theme page content
@@ -147,7 +147,7 @@ function mistylook_theme_page() {
 		else
 			$results = $wpdb->get_results("SELECT ID, post_title from $wpdb->posts WHERE post_status='static' AND post_parent=0 ORDER BY post_title");
 		
-		$excludepages = explode(',', get_settings('mistylook_excludepages'));
+		$excludepages = explode(',', get_settings(' etude_excludepages'));
 		if($results) {				
 			_e('<br/>Exclude the Following Pages from the Top Navigation <br/><br/>');
 			foreach($results as $page) 
@@ -160,9 +160,9 @@ function mistylook_theme_page() {
 		_e('<br/><br/>');
 		echo "<br/><strong> Sort the List Pages by </strong><br/>";
 		
-		ml_input( "s_sortpages", "radio", "Page Title ?", "post_title", get_settings( 'mistylook_sortpages' ) );		
-		ml_input( "s_sortpages", "radio", "Date ?", "post_date", get_settings( 'mistylook_sortpages' ) );		
-		ml_input( "s_sortpages", "radio", "Page Order ?", "menu_order", get_settings( 'mistylook_sortpages' ) );
+		ml_input( "s_sortpages", "radio", "Page Title ?", "post_title", get_settings( ' etude_sortpages' ) );		
+		ml_input( "s_sortpages", "radio", "Date ?", "post_date", get_settings( ' etude_sortpages' ) );		
+		ml_input( "s_sortpages", "radio", "Page Order ?", "menu_order", get_settings( ' etude_sortpages' ) );
 		echo "(Each Page can be given a page order number, from the wordpress admin, edit page area)";
 		echo "<br/>";			
 ?>
@@ -175,7 +175,7 @@ function mistylook_theme_page() {
 ?>
 	<?php
 		global $wpdb;
-		$id = get_option('mistylook_asideid');
+		$id = get_option(' etude_asideid');
 		$defaults = array(
 			'show_option_all' => '', 'show_option_none' => '', 
 			'orderby' => 'ID', 'order' => 'ASC', 
@@ -239,7 +239,7 @@ function mistylook_theme_page() {
 
 <?php
 }
-add_action('admin_menu', 'mistylook_add_theme_page');
+add_action('admin_menu', ' etude_add_theme_page');
 
 
 function ml_input( $var, $type, $description = "", $value = "", $selected="" ) {
@@ -314,7 +314,7 @@ define('HEADER_IMAGE_WIDTH', 760);
 define('HEADER_IMAGE_HEIGHT', 200);
 define( 'NO_HEADER_TEXT', true );
 
-function mistylook_admin_header_style() {
+function  etude_admin_header_style() {
 ?>
 <style type="text/css">
 #headimg {
@@ -331,7 +331,7 @@ function mistylook_admin_header_style() {
 </style>
 <?php
 }
-function mistylook_header_style() {
+function  etude_header_style() {
 ?>
 <style type="text/css">
 #headerimage {
@@ -341,6 +341,6 @@ function mistylook_header_style() {
 <?php
 }
 if ( function_exists('add_custom_image_header') ) {
-	add_custom_image_header('mistylook_header_style', 'mistylook_admin_header_style');
+	add_custom_image_header(' etude_header_style', ' etude_admin_header_style');
 }
 ?>

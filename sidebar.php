@@ -1,8 +1,8 @@
 <div id="sidebar">
 <ul>
 <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar() ) : else : ?>
-<?php if(is_home()) mistylook_ShowAbout(); ?>
-<?php if(!is_home()) mistylook_ShowRecentPosts();?>
+<?php if(is_home())  etude_ShowAbout(); ?>
+<?php if(!is_home())  etude_ShowRecentPosts();?>
 
 <li class="sidebox">
 	<h3><?php _e('Archives'); ?></h3>
@@ -36,7 +36,7 @@
 	<h3><?php _e('Pages'); ?></h3>
 	<ul><?php wp_list_pages('exclude=1398&title_li=' ); ?></ul>	
 </li>
-<?php if(is_home()) { mistylook_ShowLinks(); ?>
+<?php if(is_home()) {  etude_ShowLinks(); ?>
 <li class="sidebox">
 	<h3><?php _e('Meta'); ?></h3>
 	<ul>

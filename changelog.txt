@@ -1,3 +1,6 @@
+Version 0.7
+1. Cleaned up appearance of options page by removing dashed or solid borders. 
+
 Version 0.6
 1. Fixed function.php - removed extraneous space before function names inside of quotes
 

@@ -106,20 +106,20 @@ function  etude_theme_page() {
 	
 ?>
 <style>
-	.wrap { border:#ccc 1px dashed;}
+	.wrap { border:#ccc 1px;}
 	.block { margin:1em;padding:1em;line-height:1.6em;}
-	table tr td {border:#ddd 1px solid;font-family:Verdana, Arial, Serif;font-size:0.9em;}
+	table tr td {border:#ddd 1px;font-family:Verdana, Arial, Serif;font-size:0.9em;}
 	h4 {font-size:1.3em;color:#265e15;font-weight:bold;margin:0;padding:10px 0;}	
 </style>
 <div class="wrap">
 
-<h2>Etude 0.6</h2>
-
-<div class="block"><h4>Theme Page: <a href="http://zanshin.net">Etude</a> </h4> 
+<h2>Etude 0.7</h2>
+<!-->
+<div class="block"><h4>Theme Page: <a href="http://etude.zanshin.net">Etude</a> </h4> 
 					<h4>Designed & Coded by:<a href="http://zanshin.net" target="_blank">Mark Nichols</a></h4>
 					
 </div>
-
+<-->
 
 <form method="post">
 

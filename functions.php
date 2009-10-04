@@ -21,11 +21,11 @@ if ( function_exists('unregister_sidebar_widget') )
 	}
 	if ( function_exists('register_sidebar_widget') )
 	{
-		register_sidebar_widget(__('Links'), ' etude_ShowLinks');
+		register_sidebar_widget(__('Links'), 'etude_ShowLinks');
 	}
 	if ( function_exists('register_sidebar_widget') )
 	{
-		register_sidebar_widget(__('About'), ' etude_ShowAbout');
+		register_sidebar_widget(__('About'), 'etude_ShowAbout');
 	}
 function  etude_ShowAbout() {?>
 <li class="sidebox">
@@ -68,9 +68,9 @@ function  etude_add_theme_page() {
 	    // save settings
 		if ( 'save' == $_REQUEST['action'] ) {
 
-			update_option( ' etude_asideid', $_REQUEST[ 's_asideid' ] );
-			update_option( ' etude_sortpages', $_REQUEST[ 's_sortpages' ] );
-			if( isset( $_POST[ 'excludepages' ] ) ) { update_option( ' etude_excludepages', implode(',', $_POST['excludepages']) ); } else { delete_option( ' etude_excludepages' ); }
+			update_option( 'etude_asideid', $_REQUEST[ 's_asideid' ] );
+			update_option( 'etude_sortpages', $_REQUEST[ 's_sortpages' ] );
+			if( isset( $_POST[ 'excludepages' ] ) ) { update_option( 'etude_excludepages', implode(',', $_POST['excludepages']) ); } else { delete_option( 'etude_excludepages' ); }
 			// goto theme edit page
 			header("Location: themes.php?page=functions.php&saved=true");
 			die;
@@ -78,9 +78,9 @@ function  etude_add_theme_page() {
   		// reset settings
 		} else if( 'reset' == $_REQUEST['action'] ) {
 
-			delete_option( ' etude_asideid' );
-			delete_option( ' etude_sortpages' );			
-			delete_option( ' etude_excludepages' );
+			delete_option( 'etude_asideid' );
+			delete_option( 'etude_sortpages' );			
+			delete_option( 'etude_excludepages' );
 			
 			
 			// goto theme edit page
@@ -91,7 +91,7 @@ function  etude_add_theme_page() {
 	}
 
 
-    add_theme_page("Etude Options", "Etude Options", 'edit_themes', basename(__FILE__), ' etude_theme_page');
+    add_theme_page("Etude Options", "Etude Options", 'edit_themes', basename(__FILE__), 'etude_theme_page');
 
 }
 
@@ -113,9 +113,9 @@ function  etude_theme_page() {
 </style>
 <div class="wrap">
 
-<h2>Etude 0.4</h2>
+<h2>Etude 0.6</h2>
 
-<div class="block"><h4>Theme Page: <a href="http://etude.zanshin.net">Etude</a> </h4> 
+<div class="block"><h4>Theme Page: <a href="http://zanshin.net">Etude</a> </h4> 
 					<h4>Designed & Coded by:<a href="http://zanshin.net" target="_blank">Mark Nichols</a></h4>
 					
 </div>
@@ -140,14 +140,14 @@ function  etude_theme_page() {
 <tr valign="top">
 <td align="left">
 	<?php
-	ml_heading("List Pages / Navigation");		
+		ml_heading("List Pages / Navigation");		
 		global $wpdb;
 		if (function_exists('wp_list_bookmarks')) //WP 2.1 or greater
 			$results = $wpdb->get_results("SELECT ID, post_title from $wpdb->posts WHERE post_type='page' AND post_parent=0 ORDER BY post_title");
 		else
 			$results = $wpdb->get_results("SELECT ID, post_title from $wpdb->posts WHERE post_status='static' AND post_parent=0 ORDER BY post_title");
 		
-		$excludepages = explode(',', get_settings(' etude_excludepages'));
+		$excludepages = explode(',', get_settings('etude_excludepages'));
 		if($results) {				
 			_e('<br/>Exclude the Following Pages from the Top Navigation <br/><br/>');
 			foreach($results as $page) 
@@ -160,12 +160,12 @@ function  etude_theme_page() {
 		_e('<br/><br/>');
 		echo "<br/><strong> Sort the List Pages by </strong><br/>";
 		
-		ml_input( "s_sortpages", "radio", "Page Title ?", "post_title", get_settings( ' etude_sortpages' ) );		
-		ml_input( "s_sortpages", "radio", "Date ?", "post_date", get_settings( ' etude_sortpages' ) );		
-		ml_input( "s_sortpages", "radio", "Page Order ?", "menu_order", get_settings( ' etude_sortpages' ) );
+		ml_input( "s_sortpages", "radio", "Page Title ?", "post_title", get_settings( 'etude_sortpages' ) );		
+		ml_input( "s_sortpages", "radio", "Date ?", "post_date", get_settings( 'etude_sortpages' ) );		
+		ml_input( "s_sortpages", "radio", "Page Order ?", "menu_order", get_settings( 'etude_sortpages' ) );
 		echo "(Each Page can be given a page order number, from the wordpress admin, edit page area)";
 		echo "<br/>";			
-?>
+	?>
 </td>
 <td>
 <?php
@@ -175,7 +175,7 @@ function  etude_theme_page() {
 ?>
 	<?php
 		global $wpdb;
-		$id = get_option(' etude_asideid');
+		$id = get_option('etude_asideid');
 		$defaults = array(
 			'show_option_all' => '', 'show_option_none' => '', 
 			'orderby' => 'ID', 'order' => 'ASC', 
@@ -239,7 +239,7 @@ function  etude_theme_page() {
 
 <?php
 }
-add_action('admin_menu', ' etude_add_theme_page');
+add_action('admin_menu', 'etude_add_theme_page');
 
 
 function ml_input( $var, $type, $description = "", $value = "", $selected="" ) {
@@ -343,6 +343,6 @@ function  etude_header_style() {
 <?php
 }
 if ( function_exists('add_custom_image_header') ) {
-	add_custom_image_header(' etude_header_style', ' etude_admin_header_style');
+	add_custom_image_header('etude_header_style', 'etude_admin_header_style');
 }
 ?>

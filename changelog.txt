@@ -1,3 +1,9 @@
+Version 0.6
+1. Fixed function.php - removed extraneous space before function names inside of quotes
+
+Version 0.5
+1. Fixed display of header image (etude.jpg)
+
 Version 0.4
 1. Actually made column width changes rather than just comments about them. 600/300 was final size
 2. Corrected footer display of web hosting provider

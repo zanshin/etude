@@ -1,3 +1,6 @@
+Version 0.8
+1. Modified notfound.php to provide a better 404 experience.
+
 Version 0.7
 1. Cleaned up appearance of options page by removing dashed or solid borders. 
 

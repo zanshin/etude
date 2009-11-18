@@ -11,6 +11,5 @@
 <br class="clear" />
 </div><!-- end id:footer -->
 <?php wp_footer();?>
-
 </body>
 </html>

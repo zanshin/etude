@@ -2,7 +2,7 @@
 Theme Name: Etude
 Theme URI: http://zanshin.net
 Description: A work in progress. Two column theme with rigth sidebar, and oversized header image.
-Version: 0.8
+Version: 0.85
 Author: Mark Nichols
 Author URI: http://zanshin.net
 */
@@ -113,6 +113,33 @@ pre
     white-space: -o-pre-wrap;
     /* end css 3 or browser specific rules */
 }
+
+/* some minimal table styling */
+td
+{
+	padding: 0 10px 0 0;
+	color: black;
+	font-family: verdana;
+	font-size: 10px;
+	line-height: 1.8em;
+	border-bottom: #ddd;
+	border-width: 0 0 1px 0;
+	border-style: none none solid none;
+}
+
+td.noline
+{
+	border: 0;
+	text-align: left;
+}
+
+td.noliner
+{
+	border: 0;
+	text-align: right;
+}
+
+th { font-weight: bold; }
 
 #container {
 	border: #ccc 1px solid; 
